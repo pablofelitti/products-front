@@ -1,9 +1,16 @@
+<h2>All products</h2>
+<ul>
+  <li *ngFor="let product of products" (click)="onSelect(product)">
+    <span class="badge">{{product.id}}</span> {{product.name}}
+  </li>
+</ul>
+
 <h2>ID:</h2>
-<p>{{product.id}}</p>
+<p>{{selectedProduct.id}}</p>
 <h2>Name:</h2>
-<p>{{product.name}}</p>
-<input [(ngModel)]="product.name" placeholder="name"/>
+<p>{{selectedProduct.name}}</p>
+<input [(ngModel)]="selectedProduct.name" placeholder="name"/>
 <h2>Description:</h2>
-<p>{{product.description}}</p>
+<p>{{selectedProduct.description}}</p>
 <h2>Price:</h2>
-<p>{{product.price}}</p>
+<p>{{selectedProduct.price}}</p>
