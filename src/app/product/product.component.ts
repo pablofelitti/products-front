@@ -9,9 +9,9 @@ import { PRODUCTS } from '../mock-products';
 })
 export class ProductComponent implements OnInit {
 
-  products = PRODUCTS;
+  products: Product[] = PRODUCTS;
 
-  selectedProduct: Product = this.products[0];
+  selectedProduct: Product;
 
   onSelect(product: Product): void {
     this.selectedProduct = product;
