@@ -9,6 +9,7 @@ import {Product} from '../product'
 export class ProductComponent implements OnInit {
 
   product: Product = {
+    id: 1,
     name: 'First product',
     description: 'This is the description',
     price: 35.7
