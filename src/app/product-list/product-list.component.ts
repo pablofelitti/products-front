@@ -4,10 +4,10 @@ import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductListComponent implements OnInit {
 
   products: Product[];
 
