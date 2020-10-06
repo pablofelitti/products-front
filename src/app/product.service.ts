@@ -14,4 +14,8 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return of(PRODUCTS);
   }
+
+  getProduct(index): Observable<Product> {
+    return of(PRODUCTS[index-1])
+  }
 }

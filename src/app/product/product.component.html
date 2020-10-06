@@ -1,8 +1,8 @@
 <h2>All products</h2>
 <ul class="list-group">
   <li *ngFor="let product of products" (click)="onSelect(product)" class="list-group-item">
-    <span>{{product.id}}</span> {{product.name}}
+    <a routerLink="/productDetail/{{product.id}}">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </a>
   </li>
 </ul>
-
-<app-product-detail [product]="selectedProduct"></app-product-detail>
