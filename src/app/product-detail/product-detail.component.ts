@@ -28,4 +28,8 @@ export class ProductDetailComponent implements OnInit {
       .subscribe(product => this.product = product);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
 }
