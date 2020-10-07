@@ -18,4 +18,9 @@ export class ProductService {
   getProduct(index): Observable<Product> {
     return of(PRODUCTS[index-1])
   }
+
+  create(product: Product): void {
+    product.id = PRODUCTS.length + 1;
+    PRODUCTS.push(product);
+  }
 }
