@@ -25,7 +25,6 @@ export class ProductListComponent implements OnInit {
 
   getProducts() {
     this.productService.getProducts()
-      .subscribe(products => this.products = products);
+      .subscribe(products => this.products = products['_embedded']['products']);
   }
-
 }

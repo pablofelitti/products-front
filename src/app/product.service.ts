@@ -1,26 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Product } from './product';
-import { PRODUCTS } from './mock-products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor() { }
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
+  productUrl = "api/products";
+
+  constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {
-    return of(PRODUCTS);
+    return this.http.get<Product[]>(this.productUrl)
   }
 
   getProduct(index): Observable<Product> {
-    return of(PRODUCTS[index-1])
+    return this.http.get<Product>(this.productUrl + '/' + index)
   }
 
-  create(product: Product): void {
-    product.id = PRODUCTS.length + 1;
-    PRODUCTS.push(product);
+  create(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.productUrl, product, this.httpOptions)
   }
 }

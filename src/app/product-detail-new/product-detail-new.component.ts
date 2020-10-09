@@ -27,7 +27,7 @@ export class ProductDetailNewComponent implements OnInit {
   }
 
   create(): void {
-    this.productService.create(this.product);
+    this.productService.create(this.product).subscribe();
     this.goBack();
   }
 
