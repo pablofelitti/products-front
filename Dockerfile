@@ -9,5 +9,7 @@ RUN ng build --prod
 
 FROM nginx:1.19.3-alpine
 
+EXPOSE 80
+
 COPY --from=builder /products-front/nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /products-front/dist/products-front /usr/share/nginx/html/products-front
