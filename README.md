@@ -8,7 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Have minikube and Docker installed locally as well as Angular CLI
+To run the project locally just install Angular CLI
+
+To test deployments have Minikube and Docker installed
 
 ### Running in local environment
 
@@ -40,47 +42,18 @@ Run these commands in the root of the project
 
 To check if the app is running open in your browser ```<minikube_ip>:30006```
 
-## Built With
-
-* [Angular CLI](https://github.com/angular/angular-cli) - The web framework used
-* [Docker](https://www.docker.com/) - Containers to deploy the app
-* [Kubernetes](https://kubernetes.io/) - Platform to host containers
-
-
-
-
-# ProductsFront
-
-This project was generated with [Angular CLI]() version 10.1.4.
-
-## Development server
-
-Run `ng serve --open` for a dev server.
-
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-### For development purposes
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### To build image for deployment
-
-```docker build .```
-
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng e2e` to execute the end-to-end tests
 
-## Further help
+## Built With
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* [Angular CLI](https://github.com/angular/angular-cli) - The web framework used
+* [Karma](https://karma-runner.github.io) - Framework used for unit testing
+* [Protractor](http://www.protractortest.org/) - Framework used for e2e testing
+* [Docker](https://www.docker.com/) - Containers to deploy the app
+* [Kubernetes](https://kubernetes.io/) - Platform to host containers

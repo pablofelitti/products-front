@@ -1,20 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { ProductDetailNetComponent } from './product-detail-net.component';
+import { ProductDetailNewComponent } from './product-detail-new.component';
 
-describe('ProductDetailNetComponent', () => {
-  let component: ProductDetailNetComponent;
-  let fixture: ComponentFixture<ProductDetailNetComponent>;
+describe('ProductDetailNewComponent', () => {
+  let component: ProductDetailNewComponent;
+  let fixture: ComponentFixture<ProductDetailNewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductDetailNetComponent ]
+      declarations: [ ProductDetailNewComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductDetailNetComponent);
+    fixture = TestBed.createComponent(ProductDetailNewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
