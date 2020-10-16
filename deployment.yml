@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: products-front
-          image: pablofelitti/products-front:1.11
+          image: pablofelitti/products-front:1.12
           ports:
             - containerPort: 80
