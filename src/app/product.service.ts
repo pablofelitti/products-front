@@ -33,6 +33,13 @@ export class ProductService {
           );
   }
 
+  edit(product: Product): Observable<Product> {
+    return this.http.put<Product>(this.productUrl + '/' + product.id, product, this.httpOptions)
+      .pipe(
+            catchError(this.handleError)
+          );
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

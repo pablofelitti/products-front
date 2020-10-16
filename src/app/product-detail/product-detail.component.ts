@@ -32,4 +32,9 @@ export class ProductDetailComponent implements OnInit {
     this.location.back();
   }
 
+  edit(): void {
+    this.productService.edit(this.product).subscribe();
+    this.goBack();
+  }
+
 }

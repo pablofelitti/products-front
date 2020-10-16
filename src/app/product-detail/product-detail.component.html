@@ -1,14 +1,26 @@
 <div *ngIf="product">
-  <h2>Edit product</h2>
-  <h2>ID:</h2>
-  <p>{{product.id}}</p>
-  <h2>Name:</h2>
-  <p>{{product.name}}</p>
-  <input [(ngModel)]="product.name" placeholder="name"/>
-  <h2>Description:</h2>
-  <p>{{product.description}}</p>
-  <h2>Price:</h2>
-  <p>{{product.price}}</p>
 
-  <button (click)="goBack()">go back</button>
+  <h3>Edit product</h3>
+
+  <p>ID {{product.id}}</p>
+
+  <p>
+    <label for="inputName">Name</label>
+    <input id="inputName" [(ngModel)]="product.name"/>
+  </p>
+
+  <p>
+    <label for="inputDescription">Description</label>
+    <input id="inputDescription" [(ngModel)]="product.description"/>
+  </p>
+
+  <p>
+    <label for="inputPrice">Price</label>
+    <input id="inputPrice" [(ngModel)]="product.price"/>
+  </p>
+
+  <p>
+    <button type="button" class="btn btn-danger" (click)="goBack()">Cancel</button>
+    <button type="button" class="btn btn-success" (click)="edit()">Edit</button>
+  </p>
 </div>
