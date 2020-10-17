@@ -36,6 +36,14 @@ This involves creating a Docker image and deploying it to Kubernetes
 
 ### Deploying to Kubernetes
 
+In your hosts file make sure you add the following entry
+
+```<minikube_ip>    local.kubernetes.cluster```
+
+Make sure ingress is enabled
+
+```minikube addons enable ingress```
+
 Run these commands in the root of the project
 
 ```kubectl apply -f deployment.yml```

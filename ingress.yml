@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: products-front-ingress
+spec:
+  rules:
+    - host: local.kubernetes.cluster
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: products-front-service
+              servicePort: 8080
