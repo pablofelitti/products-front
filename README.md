@@ -50,6 +50,8 @@ Run these commands in the root of the project
 
 ```kubectl apply -f service.yml```
 
+```kubectl apply -f ingress.yml```
+
 To check if the app is running open in your browser ```<minikube_ip>:30006```
 
 ## Running unit tests
