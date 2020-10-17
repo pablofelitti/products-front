@@ -8,11 +8,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To run the project locally just install Angular CLI
+To run the project locally you need to have NPM and Angular CLI
 
 To test deployments have Minikube and Docker installed
 
 ### Running in local environment
+
+```npm install```
 
 ```ng serve --open```
 
@@ -53,6 +55,7 @@ Run `ng e2e` to execute the end-to-end tests
 ## Built With
 
 * [Angular CLI](https://github.com/angular/angular-cli) - The web framework used
+* [NPM](https://www.npmjs.com/get-npm) - The depedency management tool
 * [Karma](https://karma-runner.github.io) - Framework used for unit testing
 * [Protractor](http://www.protractortest.org/) - Framework used for e2e testing
 * [Docker](https://www.docker.com/) - Containers to deploy the app
