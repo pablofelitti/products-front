@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 To run the project locally you need to have NPM and Angular CLI
 
-To test deployments have Minikube and Docker installed
+To test deployments have Minikube, Docker and HELM installed
 
 ### Running in local environment
 
@@ -22,7 +22,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Deployment
 
-This involves creating a Docker image and deploying it to Kubernetes
+This involves creating a Docker image and deploying it to a local Minikube Kubernetes instance using HELM
 
 ### Creating Docker image
 
@@ -34,25 +34,21 @@ This involves creating a Docker image and deploying it to Kubernetes
 
 ```docker push pablofelitti/products-front:<next_version>```
 
-### Deploying to Kubernetes
+### Deploying to Kubernetes using HELM
 
 In your hosts file make sure you add the following entry
 
 ```<minikube_ip>    local.kubernetes.cluster```
 
-Make sure ingress is enabled
+Make sure ingress is enabled in local Minikube instance
 
 ```minikube addons enable ingress```
 
 Run these commands in the root of the project
 
-```kubectl apply -f deployment.yml```
+```helm install products-front products-front-chart/```
 
-```kubectl apply -f service.yml```
-
-```kubectl apply -f ingress.yml```
-
-To check if the app is running open in your browser ```<minikube_ip>:30006```
+To check if the app is running open in your browser ```<minikube_ip>:80```
 
 ## Running unit tests
 
